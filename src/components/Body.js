@@ -9,37 +9,12 @@ function List({ checked, task }) {
   );
 }
 
-const list = [
-  {
-    task: "Release on Github 🎉",
-    checked: false,
-  },
-  {
-    task: "Support for dark/light mode",
-    checked: true,
-  },
-  {
-    task: "Make UI ",
-    checked: true,
-  },
-
-  {
-    task: "Add scss on react project",
-    checked: true,
-  },
-
-  {
-    task: "Create React Project",
-    checked: true,
-  },
-];
-
-function Body() {
+function Body({ list }) {
   return (
     <div className="list-container">
       <div className="lists">
         {list.map((el) => (
-          <List checked={el.checked} task={el.task} />
+          <List key={el.task} checked={el.checked} task={el.task} />
         ))}
       </div>
     </div>
