@@ -1,8 +1,11 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Todo from "./components/Todo";
 
 function App() {
-  return <h1>Hello Worlds</h1>;
+  return (
+    <div>
+      <Todo />
+    </div>
+  );
 }
 
 export default App;
