@@ -1,7 +1,7 @@
 import "../styles/Todo.min.css";
 import Header from "./Header";
 import Body from "./Body";
-import Input from "./input";
+import Input from "./Input";
 import { useState } from "react";
 
 const list = [
@@ -37,7 +37,7 @@ function Todo() {
       <div className="todo">
         <Header />
         <Body list={task} />
-        <Input task={task} setTask={setTask} />
+        <Input list={task} setTask={setTask} />
       </div>
     </div>
   );
