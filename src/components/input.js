@@ -1,16 +1,12 @@
 import { useState } from "react";
 
-function Input({ task, setTask }) {
+function Input({ list, setTask }) {
   const [input, setInput] = useState("");
 
   function getTask(e) {
     e.preventDefault();
-    const newTask = {
-      task: e.target[0].value,
-      checked: false,
-    };
     setTask([
-      ...task,
+      ...list,
       {
         task: e.target[0].value,
         checked: false,
